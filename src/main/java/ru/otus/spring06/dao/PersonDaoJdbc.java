@@ -17,9 +17,4 @@ public class PersonDaoJdbc implements PersonDao {
     public PersonDaoJdbc(JdbcOperations jdbcOperations) {
         jdbc = jdbcOperations;
     }
-
-    @Override
-    public int count() {
-        return jdbc.queryForObject("select count(*) from persons", Integer.class);
-    }
 }
